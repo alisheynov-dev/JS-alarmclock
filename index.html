@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fb2867b2b5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/alarm.css">
+    
+</head>
+<body class="apply_dark"> 
+
+<div class="alarm">
+    
+
+    <main class="wrapper">
+        
+        
+        <div class="user-input">
+            <div>Select alarm</div>
+            <div class="hour-box"></div>
+
+            <div class="sethourBox">
+                <select title="Select HH:xx"name="" id="h"></select>
+                <select title="Select xx:MM"name="" id="m"></select>
+               </div>
+
+               <button class="button-setAlarm"> SET ALARM</button>
+
+               <div class="extra-info">
+                <div title="Time left for next alarm" class="timeleft "><i class="fa-solid fa-angles-right"></i> <span class="time">empty</span><div class="circle-tm"></div></div>
+                <div title="Next alarm" class="next-alarm "><i class="fa-regular fa-bell"></i> <span class="next">empty</span><div class="circle-tm"></div></div>
+            
+               
+            </div>
+
+            
+            <i title="Return" id="scroll-top" class="fa-solid fa-angles-up"></i>
+            
+            <i title="Options" id="menu" class="fa-solid fa-ellipsis-vertical"></i>
+
+
+        </div>
+
+   
+    
+
+            <p class="infoMessage">Already active</p>
+            <div class="programmedAlarms"></div>
+
+    </main>
+
+
+    
+        
+
+
+       
+
+
+
+    
+
+</div>
+
+   
+    
+
+
+
+    <template id="alarm-addition">
+        <div class="alrm">
+            <div class="left">
+                <div>Hour</div>
+                <div class="left-H">10:39</div>
+            </div>
+            <div class="center">
+                <span title="Monday" class="day m">M</span><span title="Tuesday" class="day t1">T</span><span title="Wednesday" class="day w">W</span><span title="Thursday" class="day t2">T</span><span title="Friday" class="day f">F</span><span title="Saturday" class="day s1">S</span><span title="Sunday" class="day s2">S</span>
+                </div>
+            <div class="switch">
+                <div class="ball-switcher"></div>
+            </div>
+            <div class="delete">X</div>
+        </div>
+    </template>
+
+
+    
+    <div id="wrapper-of-alarm-trigger" class="hideme">
+        <div id="alarm-trigger">
+
+            <div class="hour-tr">12.33</div>
+    
+            <div class="options">
+
+                
+    
+                <button class="postpone">POSTPONE</button>
+    
+                <button class="del">DELETE</button>
+            </div>
+
+            <div class="sound-options">
+                
+                <input type="range">
+            </div>
+    
+        </div>
+    </div>
+
+</template>
+
+
+
+<div class="settings">
+
+    <p class="menu-titles">Configuration </p>
+    <div class="separador"></div>
+    
+    <div class="activation-mode-menu">
+        <div class="menu-titles">Alarm des-activation mode</div>
+        <div class="separador"></div>
+        <div class="activation-option default isOn-am">Default <span class="info-des info-def">?</span></div>
+        <div class="activation-option math">Math Operation <span  class="info-des info-math">?</span></div>
+        <div class="activation-option phrase">Phrase Operation <span  class="info-des info-phrase">?</span></div>
+    </div>
+    <div class="separador"></div>
+    <div class="retard-activation-menu">
+        <div class="menu-titles">Postpone option </div>
+        <div class="postpone-bool isOn-po">YES</div>
+        <div class="postpone-bool">NO</div>
+    </div>
+    <div class="separador"></div>
+    <div class="sound-select-menu">
+        <div class="menu-titles">Select your tone</div>
+       <div class="tone-list">
+        <div class=" tone tone1 isOn-tt">S1</div>
+        <div class=" tone tone2">S2</div>
+        <div class=" tone tone3">S3</div>
+       </div>
+        
+
+    </div>
+
+</div>
+
+
+<div class="circle1 animation-soft"></div>
+<div class="circle2 animation-soft2"></div>
+
+
+
+<div class="information ">
+    <div class="decorative"></div>
+    <div class="successfull"><i class="fa-solid "></i></div>
+    <div class="message-info"></div>
+</div>
+
+
+<div class="tooltip"></div>
+
+<!-- <div class="cloud"></div> -->
+
+<!-- <div class="screen-mode"><i title="" class="fa-solid fa-moon"></i></div> -->
+
+<div class="developer">@ Developed By <span>alisheynov</span></div>
+    
+    <script src="js/alarm.js"></script>
+</body>
+</html>

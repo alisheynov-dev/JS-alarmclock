@@ -1,0 +1,1160 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 120vh;
+    box-sizing: border-box;
+    font-family: Space Grotesk;
+    background-color: black;
+    user-select: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    
+
+}
+
+.animateBody{
+    animation: animateBck 3s ease-in-out;
+}
+    @keyframes animateBck{
+        0%{
+            background-color: 000;
+        }
+        10%{
+            background-color: #470101;
+        }
+        20%{
+            background-color: #000;
+        }
+        30%{
+            background-color: #470101;
+        }
+        40%{
+            background-color: #000;
+        }
+        50%{
+            background-color: #470101;
+        }
+
+        60%{
+            background-color: #000;
+        }
+        80%{
+            background-color: #470101;
+        }
+        
+        100%{
+            background-color: 000;
+        }
+    }
+    
+input{
+    font-size: 16px;
+}
+.apply_dark{
+    background-image: url("../imgs/darkmode.svg");
+}
+
+
+img{
+    position: absolute;
+    right: 20px;
+    width: 60px;
+    
+}
+
+
+
+.alarm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    background-color: rgba(255,255,255,0.103);
+    box-shadow: 0 0 20px rgba(0,0,0,0.384);
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 30px;
+    z-index: 95;
+    backdrop-filter: blur(9px);
+    
+    
+}
+
+
+
+
+.wrapper{
+    background-color: #e0e5ec;
+    width: 500px;
+    min-height: 270px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    transition: 400ms;
+    position: relative;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    order: 1;
+    
+}
+
+#scroll-top{
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    cursor: pointer;
+}
+#scroll-top:hover,#menu:hover{
+   color: #383838;
+}
+
+#menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: inline-block;
+    transition: 200ms;
+    
+}
+    .activated{
+        transform: rotate(90deg)
+    }
+
+
+                /* extended version of wrapper */
+                .extend-wrapper{
+                    
+                    transition: 400ms;
+                }
+.user-input{
+    
+    height: 300px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+    .selectAlarm div:nth-of-type(1){
+        align-self: flex-start;
+    }
+.hour-box{
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+.button-setAlarm{
+    border: none;
+    padding: 15px 70px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    letter-spacing: 3px;
+    position: relative;
+    z-index:1;
+    
+    cursor: cell;
+
+}
+
+.button-setAlarm::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 0%;
+    background-image: linear-gradient(to right, #1acdff,#a98831);
+    border-radius: 0;
+    z-index: -2;
+    margin: auto;
+    
+    
+}
+
+.button-setAlarm:hover::after{
+    height: 20%;
+    transition: 150ms;
+}
+
+.button-setAlarm:not(:hover)::after{
+    height:0%;
+    
+    transition-duration: 400ms;
+}
+
+select{
+    width: 100px;
+    margin: 10px;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 2px 3px 5px rgba(46, 46, 46, 0.425);
+    font-weight: bold;
+    font-size: 1.2REM;
+    cursor: grab;
+}
+select:focus{
+    outline: none;
+    border: none;
+    
+}
+select:hover{
+    background: rgb(204, 204, 204);
+    transition: 100ms;
+}
+
+
+.programmedAlarms{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    
+    
+    
+    width: 100%;
+    
+    margin-bottom: 10px;
+    
+    margin: auto;
+}
+
+
+.alrm{
+    background-color: rgb(0, 0, 0);
+    
+    width: 390px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    margin-top: 2px;
+    border-radius: 15px;
+}
+    .day{
+        
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
+    .isToday{
+        background-color: rgb(107, 156, 107);
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        
+        height: 100%;
+        justify-content: space-around;
+    }
+    .alrm .left div:nth-of-type(1){
+        font-size: 0.8rem;
+    }
+    .alrm .left div:nth-of-type(2){
+        font-size:2rem;
+        width: 95px;
+        
+    }
+
+    .switch{
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: white;
+        position: relative;
+        box-shadow: 1px 2px 14px rgba(255, 255, 255, 0.356);
+
+    }
+    .ball-switcher{
+        background: #000000;
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: absolute;
+        left: 1px;
+        top:1px;
+        transition: left 200ms;
+
+    }
+
+    .delete{
+        font-size: 1rem;
+        background-color: white;
+        color: black;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 1px 2px 14px rgba(255, 255, 255, 0.356);
+
+        
+    }
+    .delete:hover{
+        background-color: rgb(196, 196, 196);
+    }
+    
+
+
+
+
+    /* extra-functionality */
+
+    .infoMessage{
+        color: transparent;
+    }
+   
+    .extra-functionality{
+        background-color: black;
+        width: 400px;
+        height: 280px;
+        border-radius: 20px;
+        margin: 30px;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .extra-info{
+       
+        align-items: center;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        
+    }
+    .timeleft,.next-alarm{
+        border: none;
+        background-color:#e0e5ec;
+        box-shadow: -8px -8px 15px rgba(255,255,255,.8),
+                    10px 10px 10px rgba(0,0,0,.1);
+        
+        width : 120px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        
+    }
+    .time,.next{
+        text-decoration: underline;
+    }
+    
+    
+    
+     
+    
+
+    
+
+    .alarm-activated{
+        background-color: white;
+        color: black;
+        width: 90%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .activated-hour{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .options-after-activation button{
+        border: none;
+        width: 130px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    position: relative;
+    z-index:1;
+    
+    cursor: cell;
+
+    }
+    .options-after-activation button:nth-of-type(1){
+        background-color: rgb(206, 18, 18);
+    }
+    .options-after-activation button:nth-of-type(2){
+        background-color: rgb(18, 16, 29);
+    }
+
+    
+    .settings{
+        position: absolute;
+        width: 280px;
+        height: 385px;
+        top: 60px;
+        left:-400px;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 99;
+        border-radius: 20px;
+        transition: right 500ms ease-in;
+        color: white;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: #1acdff 0px 10px 16px -8px,#a98831 20px -10px 36px -14px;
+        transition: 200ms;
+       
+        
+    }
+    
+    .menu-titles{
+        background:linear-gradient(to right,black,transparent);
+        border-radius: 10px 0 0 10px;
+        padding: 5px 20px;
+        margin: 10px 0;
+        
+    }
+    
+    
+        
+    
+    
+    
+   /*  .settings .separador{
+        width: 70%;
+       height: 1px;
+       background-color: rgb(255, 255, 255);
+       margin: 5px 0;
+       box-shadow: 10px 0px 10px rgb(255, 17, 0);
+    } */
+    .activation-option, .postpone-bool,.tone{
+        border: 1px solid rgba(255, 255, 255, 0.247);
+        margin: 2px 0;
+        padding: 0px 5px;
+        transition: background-color 400ms ease-out;
+    }
+    .activation-option:hover, .postpone-bool:hover,.tone:hover{
+        background: linear-gradient(to right,transparent,rgba(255, 255, 255, 0.541),transparent);
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+    }
+        
+    
+    .add-settings{
+        left:20px;
+    }
+    .quit-settings{
+        left:-400px;
+    }
+
+    .isOn-am,.isOn-po, .isOn-tt{
+        background:linear-gradient(to right, transparent, rgba(255, 255, 255, 0.541), transparent);
+    }
+    .info-def,.info-math,.info-phrase{
+        float: right;
+        background-color: black;
+        padding: 0 5px;
+        border-radius: 50%;
+        transition: background 200ms;
+    }
+    .info-def:hover,.info-math:hover,.info-phrase:hover{
+        background-color: #585858;
+    }
+    .tone-list{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .tone-list .tone{
+        width: 70px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .confirm-tone{
+        width: 100px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 5px;
+        text-align: center;
+        border-radius: 5px;
+        background:black;
+
+    }
+
+    /* styles for math operation interface */
+    div.math-operation-style{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 200px;
+        align-items: center;
+        box-shadow: 2px 2px 5px #000, 2px 2px 2px #00000044;
+        margin: 20px 0 20px;
+        border-radius: 20px;
+        
+    }
+    .math-operation-header{
+        width: 100%;
+        display: flex;
+        height: 30px;
+        justify-content: space-around;
+    }
+        .math-operation-header i{
+            display: flex;    
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 10%;
+        }
+    
+    .sel-dif-text{
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    .math-operation-difficulty{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2px;
+    }
+    .math-operation-difficulty div{
+        width: 150px;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: white;
+        
+        
+    }
+        .math-operation-difficulty div:nth-of-type(1){
+                background-color: rgb(46, 155, 46);
+                transition:background-color 200ms;
+        }
+        .math-operation-difficulty div:nth-of-type(2){
+                background-color: rgb(185, 50, 50);
+                transition:background-color 200ms;
+        }
+        .math-operation-difficulty div:nth-of-type(1):hover{
+                background-color: rgb(29, 109, 29);
+        }
+        .math-operation-difficulty div:nth-of-type(2):hover{
+                background-color: rgb(139, 33, 33);
+        }
+    
+    .math-operation-resolve{
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .math-operation-answer{
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        border: none;
+        height: 30px;
+        text-align: center;
+        
+    }
+
+    .circle-red-math{
+        background-color: rgb(168, 48, 48);
+        width: 20px;
+        height: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px #000, -2px -2px 5px gray;
+    }
+
+
+    /* Phrase operation styles */
+
+    .user-input-phrase{
+            width: 80%;
+    height: auto;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 5px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px #000, -2px -2px 5px gray;
+    }
+
+    .phrase-box{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    align-items: center;
+    box-shadow: 2px 2px 5px #000, 2px 2px 2px #00000044;
+    margin: 20px 0 20px;
+    border-radius: 20px;
+    }
+    .phrase-to-copy{
+        color: #ffffffaa;
+        font-size: 1.4rem;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 80%;
+    }
+    .phrase-box i{
+        color: white;
+        background: none;
+        font-size: 3rem;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px #000, -2px -2px 5px gray;
+        margin: 10px 0 10px;
+         
+    }
+    .circle-red{
+        background-color: rgb(168, 48, 48);
+        width: 20px;
+        height: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px #000, -2px -2px 5px gray;
+    }
+        
+    
+    
+
+
+
+
+
+
+    .desactivation-mode{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    
+   
+
+    
+    @media (max-width:1000px){
+        .cloud{
+           
+            z-index: 99;
+            top: -100px;
+            background-position: center;
+        }
+        .settings{
+            color: black;
+        }
+        .menu-titles{
+            color: white;
+        }
+        .info-def,.info-math,.info-phrase{
+            background-color: #585858;
+            color: white;
+        }
+        .info-def:hover,.info-math:hover,.info-phrase:hover{
+            background-color: #3f3f3f;
+
+        }
+        .activation-option, .postpone-bool,.tone{
+            border: 1px solid rgba(61, 61, 61, 0.384);
+            margin: 2px 0;
+            padding: 0px 5px;
+            transition: background-color 400ms ease-out;
+        }
+
+        .activation-option:hover, .postpone-bool:hover,.tone:hover{
+            background: linear-gradient(to right,transparent,rgba(61, 61, 61, 0.541),transparent);
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+        }
+        .isOn-am,.isOn-po, .isOn-tt{
+            background:linear-gradient(to right, transparent, rgba(61, 61, 61, 0.541), transparent);
+        }
+    }
+
+    /* For super small devices */
+    @media (max-width:600px){
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+           
+        }
+       
+
+
+       
+        
+
+
+
+
+
+        div#alarm-trigger{
+            width: 420px;
+        }
+        
+        .sound-options input{
+            display: none;
+        }
+        .timeleft,.next-alarm{
+            font-size: 0.8rem;
+        }
+        .extra-info{
+            width: 80%;
+            margin-top: 20px;
+        }
+        .hour-box{
+            font-size: 2rem;
+
+        }
+        .sethourBox{
+
+            width: 100%;
+            text-align: center;
+            
+            
+        }
+        #h,#m{
+            text-align: center;
+            color: black;
+            padding: 10px 10px;
+        }
+        .alarm{
+            width: 90%;
+            
+           
+        }
+        .wrapper{
+            background-color: #e0e5ec;
+            border-radius: 20px;
+            width: 100%;
+            
+        }
+        .alrm{
+            width: 95%;
+            
+        }
+        .left{
+            width: 60px;
+
+        }
+        .center{
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            height: 50px;
+            flex-wrap: wrap;
+        }
+        .alrm .left div:nth-of-type(2){
+            font-size: 1.3rem;
+        }
+
+        .circle1, .circle2{
+            width: 200px !important;
+            height: 200px !important;
+
+        }
+        .circle2{
+            top: 20px !important;
+            right: 40px !important;
+        }
+        .circle1{
+            top: 20px !important;
+            left: 40px !important;
+        }
+        
+        
+
+        
+
+
+        
+        
+        
+    }
+        
+
+    #wrapper-of-alarm-trigger{
+        background-color: black;
+        width: 100%;
+        max-width: 100vw;
+        height: 100%;
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.234);
+        
+    }
+    #alarm-trigger{
+        box-sizing: border-box;
+        background-color: rgb(51, 51, 51);
+        border-radius: 20px;
+        width: 500px;
+        height: 200px;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        animation: borderr-change 3s infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .hideme{
+        display: none;
+    }
+    .options{
+        width: 100%;
+        background-color: #00000011;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .sound-options{
+        position: absolute;
+        right: 40px;
+        top: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .sound-options input{
+        width: 100px;
+    }
+        .hour-tr{
+            font-size:4rem ;
+            color: white;
+            font-weight: bold;
+        }
+        .postpone{
+            width: 120px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            
+            
+        }
+        .postpone:hover{
+            background-color:rgb(206, 135, 4) ;
+        }
+        .del{
+            background-color: rgb(168, 48, 48);
+            border-radius: 10px;
+            border: none;
+            height: 30px;
+            color: white;
+            width: 80px;
+            
+        }
+            .del:hover{
+                background-color:rgb(145, 38, 38); ;
+            }
+
+
+        @keyframes borderr-change{
+            0%{
+                border-radius: 0px;
+
+            }
+            20%{
+                border-radius: 0;
+            }
+            40%{
+                border-radius: 20px;
+            }
+            60%{
+                border-radius: 0;
+            }
+            80%{
+                border-radius: 20px;
+            }
+            100%{
+                border-radius: 0;
+            }
+        }
+        
+
+
+
+
+    .circle1{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 50px;
+        left: 50px;
+        background-image: linear-gradient(to right, #1acdff,#a98831);
+        border-radius: 50%;
+       
+    }
+
+    @keyframes movecircle-soft{
+        to{
+        transform: translate(40px,30px) rotate(360deg);
+        }
+    }
+    @keyframes movecircle-soft2{
+        
+        to{
+            transform:translate(-40px, 30px) rotate(360deg);
+        }
+    }
+    @keyframes movecircle-hard{
+        to{
+        transform: translate(20px,-10px);
+        }
+    }
+    @keyframes movecircle-hard2{
+        to{
+            transform: translate(-20px,-10px);
+        }
+    }
+
+    .circle2{
+        position: absolute;
+        width:300px;
+        height:300px;
+        top: 50px;
+        right: 50px;
+        background-image: linear-gradient(to right, #a98831,#1acdff);
+        border-radius: 50%;
+    }
+    /* for both circles */
+    .animation-soft{
+        animation:movecircle-soft 5s infinite both ease-in alternate;
+    }
+    .animation-soft2{
+        animation:movecircle-soft2 5s infinite both ease-in alternate;
+    }
+    .animation-hard{
+        animation:movecircle-hard 300ms infinite both ease-in alternate;
+    }
+    .animation-hard2{
+        animation:movecircle-hard2 300ms infinite both ease-in alternate;
+    }
+
+
+
+
+
+
+
+
+    #user-options{
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        width: 200px;
+        margin: auto;
+        flex-direction: column;
+    }
+    #minute-options{
+        display: flex;
+    }
+    #minute-options div{
+
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        
+    }
+    #minute-options div:hover{
+        background-color: white;
+        color: black;
+        
+    }
+    
+
+
+    
+
+
+    .screen-mode{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: rgb(207, 178, 12);
+        font-size: 2rem;
+        transition: color 1s;
+        
+    }
+        .screen-mode:hover{
+            color: rgb(245, 210, 15);
+            
+            
+        }
+
+    .information{
+        background-color: rgb(68, 68, 68);
+        width: 250px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 10fr;
+        gap: 3px;
+        min-height: 40px;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        position: fixed;
+        top: 10px;
+        left: -250px;
+        z-index: 99;
+        
+    }
+    .show-info{
+        animation: show_message 800ms 1 linear forwards;
+    }
+    .show-info-small-screens{
+        animation: show_message_small_devices 2000ms 1 linear forwards;
+    }
+    
+       
+        @keyframes show_message{
+            0%{
+                left:-250px;
+                
+            }
+            10%{
+                left: 10px;
+                
+            }
+            90%{
+                left: 10px;
+                
+            }
+            100%{
+                left: -250px;
+                
+            }
+            
+            
+        }
+        
+         .decorative{
+            width: 10px;
+            background-color: rgb(107, 156, 107);
+            ;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        .successfull, .message-info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+            i.fa-solid.fa-circle-check{
+                font-size: 1.5rem;
+                color: rgb(107, 156, 107);
+                
+            }
+            i.fa-solid.fa-circle-exclamation{
+                font-size: 1.5rem;
+                color: rgba(202, 56, 56, 0.692);
+            }
+            i.fa-solid.fa-circle-info{
+                font-size: 1.5rem;
+                color: rgb(206, 135, 4, 0.692);
+            }
+            .message-info{
+                color: rgba(231, 231, 231, 0.692);
+                
+            }
+
+
+
+    .developer{
+        width: 100%;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        font-size: 0.7rem;
+        background-color: rgba(0, 0, 0, 0.74);
+        z-index: 1000;
+        
+    }
+    
+        .developer span{
+            background: linear-gradient(to right,#1acdff,#a98831);
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            
+        }
+
+
+
+/* 
+        .cloud{
+            background-image: url("../imgs/cloud_off.png");
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            filter: opacity(0.9)
+        }
+        .cloud:hover{
+            filter: opacity(1.0);
+        } */
+
+
+
+
+
+
+         /* 31/08/2025
+    VERSION 1.0.0
+    With love, A.H */
+       
